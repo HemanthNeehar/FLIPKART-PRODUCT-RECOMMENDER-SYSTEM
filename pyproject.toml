@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "FLIPKART-RECOMMENDER"
+version = "0.1"
+authors = [
+    {name = "Hemanth"}
+]
+description = "AI-powered Flipkart Product recommendation system"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "langchain",
+    "langchain-astradb",
+    "langchain-huggingface",
+    "langchain-groq",
+    "langchain-community",
+    "datasets",
+    "pypdf",
+    "python-dotenv",
+    "pandas",
+    "flask",
+    "prometheus_client"
+]
+
+[tool.setuptools]
+packages = {find = {}}

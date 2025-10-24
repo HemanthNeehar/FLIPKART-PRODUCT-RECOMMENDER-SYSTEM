@@ -1,0 +1,5 @@
+.env
+venv/
+FLIPKART_RECOMMENDER.egg-info/
+*pycache*
+*.txt
