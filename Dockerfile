@@ -9,10 +9,16 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 WORKDIR /app
 
 ## Installing system dependancies
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     curl \
     && rm -rf /var/lib/apt/lists/*
+
+# Upgrade pip and install build tools for pyproject builds
+RUN python -m pip install --upgrade pip setuptools wheel
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
 ## Copying ur all contents from local to app
 COPY . .

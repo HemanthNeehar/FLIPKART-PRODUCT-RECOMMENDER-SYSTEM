@@ -1,8 +1,8 @@
-langchain
+langchain >= 0.3.27
 langchain-astradb
 langchain-huggingface
 langchain-groq
-langchain-community
+langchain-community >= 0.3.31
 datasets
 pypdf
 python-dotenv
