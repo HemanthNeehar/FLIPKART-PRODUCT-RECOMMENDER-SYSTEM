@@ -2,4 +2,4 @@
 venv/
 FLIPKART_RECOMMENDER.egg-info/
 *pycache*
-*.txt
+Explanation*.txt
